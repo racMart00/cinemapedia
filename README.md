@@ -21,6 +21,9 @@ A new Flutter project.
 4. git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git
 5. git push -u origin master
 
+# Crear nueva rama y movernos a ella
+1. git checkout -b branch_name
+
 # Flutter Launcher Icons
 1. pubspec assist flutter_launcher_icons
 2. dart run flutter_launcher_icons
