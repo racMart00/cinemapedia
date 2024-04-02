@@ -12,7 +12,8 @@ A new Flutter project.
  Repositorios y Datasources: Los repositorios llaman los datasources
  Informacion: Y luego la informacion regresa al UI.
 
-# Test API (The MovieDB) --> https://api.themoviedb.org/3/movie/550?api_key = Clave de la API
+# Test API (The MovieDB)
+ https://api.themoviedb.org/3/movie/550?api_key = Clave de la API
 
 # Pasos para hacer primer commit
 1. git init
