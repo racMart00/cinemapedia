@@ -1,6 +1,9 @@
 # cinemapedia
 A new Flutter project.
 
+# Dar permisos de Internet
+<uses-permission android:name="android.permission.INTERNET"/>
+
 # Dev
 1. Copiar el .env.template y renombrarlo a .env
 2. Cambiar las variables de entorno (The MovieDB)
