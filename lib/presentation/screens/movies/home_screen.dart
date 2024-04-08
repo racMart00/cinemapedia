@@ -32,6 +32,8 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 
     ref.read( nowPlayingMoviesProvider.notifier ).loadNextPage();
     ref.read( popularMoviesProvider.notifier ).loadNextPage();
+    ref.read( topRatedMoviesProvider.notifier ).loadNextPage();
+    ref.read( upcomingMoviesProvider.notifier ).loadNextPage();
   }
 
   @override
@@ -40,6 +42,8 @@ class _HomeViewState extends ConsumerState<_HomeView> {
     final nowPlayingMovies = ref.watch( nowPlayingMoviesProvider );
     final slideShowMovies = ref.watch( moviesSlideShowProvider );
     final popularMovies = ref.watch( popularMoviesProvider );
+    final topRatedMovies = ref.watch( topRatedMoviesProvider );
+    final upcomingMovies = ref.watch( upcomingMoviesProvider );
 
     // if ( slideShowMovies.isEmpty ) return const Center(child: CircularProgressIndicator());
 
@@ -72,9 +76,23 @@ class _HomeViewState extends ConsumerState<_HomeView> {
 
                 MovieHorizontalListview(
                   movies: nowPlayingMovies,
-                  title: 'Mejor Calificacion',
-                  subTitle: 'Desde Siempre',
+                  title: 'En Estreno',
+                  // subTitle: 'Desde Siempre',
                   loadNextpage: () => ref.read( nowPlayingMoviesProvider.notifier ).loadNextPage(),
+                ),
+
+                MovieHorizontalListview(
+                  movies: topRatedMovies,
+                  title: 'Mejor Calificacion',
+                  // subTitle: 'Desde Siempre',
+                  loadNextpage: () => ref.read( topRatedMoviesProvider.notifier ).loadNextPage(),
+                ),
+
+                MovieHorizontalListview(
+                  movies: upcomingMovies,
+                  title: 'Por Salir',
+                  // subTitle: 'Desde Siempre',
+                  loadNextpage: () => ref.read( upcomingMoviesProvider.notifier ).loadNextPage(),
                 ),
 
                 const SizedBox( height: 10 ),
