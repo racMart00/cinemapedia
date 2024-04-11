@@ -4,8 +4,7 @@ import 'package:cinemapedia/domain/entities/actor.dart';
 
 import 'package:cinemapedia/presentation/providers/actors/actors_repository_provider.dart';
 
-
-final movieInfoProvider = StateNotifierProvider<ActorsByMovieNotifier, Map<String, List<Actor>>>((ref){
+final actorsByMovieProvider = StateNotifierProvider<ActorsByMovieNotifier, Map<String, List<Actor>>>((ref){
   final actorsRepository = ref.watch( actorsRepositoryProvider );
 
   return ActorsByMovieNotifier(getActors: actorsRepository.getActorsByMovie  );
