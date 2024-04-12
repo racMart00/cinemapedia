@@ -8,7 +8,7 @@ class CustomAppbar extends ConsumerWidget {
   const CustomAppbar({super.key});
 
   @override
-  Widget build(BuildContext context, ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final colors = Theme.of(context).colorScheme;
     final titleStyle = Theme.of(context).textTheme.titleMedium;
 
