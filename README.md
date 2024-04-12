@@ -1,8 +1,8 @@
 # cinemapedia
-A new Flutter project.
+ A new Flutter project.
 
 # Dar permisos de Internet
-<uses-permission android:name="android.permission.INTERNET"/>
+ <uses-permission android:name="android.permission.INTERNET"/>
 
 # Dev
 1. Copiar el .env.template y renombrarlo a .env
@@ -31,27 +31,10 @@ A new Flutter project.
 # Flutter Launcher Icons
 1. pubspec assist flutter_launcher_icons
 2. dart run flutter_launcher_icons
-    dev_dependencies:
-      flutter_launcher_icons: "^0.13.1"
-
-    flutter_launcher_icons:
-      android: "launcher_icon"
-      ios: true
-      image_path: "assets/icon/icon.png"
-      min_sdk_android: 21 # android min sdk min:16, default 21
-      web:
-        generate: true
-        image_path: "path/to/image.png"
-        background_color: "#hexcode"
-        theme_color: "#hexcode"
-      windows:
-        generate: true
-        image_path: "path/to/image.png"
-        icon_size: 48 # min:48, max:256, default: 48
-      macos:
-        generate: true
-        image_path: "path/to/image.png"
 
 # Rename App
 1. pubspec assist rename_app
 2. dart run rename_app:main all="My App Name"
+
+# Build
+1. flutter build apk
