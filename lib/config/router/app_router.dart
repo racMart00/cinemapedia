@@ -1,6 +1,8 @@
 import "package:go_router/go_router.dart";
 
 import "package:cinemapedia/presentation/screens/screens.dart";
+import "package:cinemapedia/presentation/views/views.dart";
+
 
 final appRouter = GoRouter(
   initialLocation: '/',
@@ -9,7 +11,9 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/',
       name: HomeScreen.name,
-      builder: (context, state) => const HomeScreen(),
+      builder: (context, state) => const HomeScreen(
+        childView: HomeView(),
+      ),
       routes: [
 
         GoRoute(
